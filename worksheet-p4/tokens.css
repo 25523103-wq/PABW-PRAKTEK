@@ -1,0 +1,46 @@
+/* LAPIS 1 — token primitif: nilai mentah */
+:root {
+    --blue-700: #1D4ED8;
+    --blue-500: #2563EB;
+
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-300: #CBD5E1;
+    --gray-700: #334155;
+    --gray-900: #0F172A;
+
+    --white: #FFFFFF;
+    --red-700: #B00020;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+
+    --radius-md: 0.5rem;
+    --radius-full: 999px;
+
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, .10);
+
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-xl: 1.5rem;
+    --text-3xl: 2.25rem;
+}
+
+
+/* LAPIS 2 — token semantik: peran */
+:root {
+    --color-bg: var(--gray-50);
+    --color-fg: var(--gray-900);
+    --color-surface: var(--white);
+    --color-border: var(--gray-300);
+
+    --color-primary: var(--blue-700);
+    --color-danger: var(--red-700);
+    --color-focus: var(--blue-500);
+
+    --card-pad: var(--space-4);
+    --section-gap: var(--space-6);
+}
