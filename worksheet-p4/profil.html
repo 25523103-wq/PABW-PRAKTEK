@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Foto Pesawat Favorit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Koleksi Foto Pesawat Favorit</h1>
+        <p>Kumpulan foto pesawat favorit saya beserta informasi maskapai dan lokasinya.</p>
+
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="#koleksi">Beranda</a></li>
+                <li><a href="#koleksi">Koleksi Foto</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#tambah">Tambah Foto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="koleksi">
+            <h2>Daftar Koleksi Foto Pesawat</h2>
+
+            <table>
+                <caption>Daftar koleksi foto pesawat favorit</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nama Pesawat</th>
+                        <th scope="col">Maskapai</th>
+                        <th scope="col">Lokasi Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Airbus A330-300</th>
+                        <td>Garuda Indonesia</td>
+                        <td>Bandara Soekarno-Hatta</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Boeing 777-300ER</th>
+                        <td>Singapore Airlines</td>
+                        <td>Bandara Changi</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Airbus A350-900</th>
+                        <td>Japan Airlines</td>
+                        <td>Bandara Haneda</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img
+                    src="Citilinka330neo.jpg"
+                    alt="Airbus A330-900neo Citilink"
+                    width="640"
+                    height="360"
+                    loading="lazy">
+                <figcaption>Airbus A330-900neo Citilink</figcaption>
+            </figure>
+        </section>
+
+        <section id="tambah">
+            <h2>Tambah Foto Baru</h2>
+
+            <form action="/simpan" method="post">
+                <p>
+                    <label for="nama-pesawat">Nama Pesawat</label>
+                    <input type="text" id="nama-pesawat" name="nama-pesawat" required>
+                </p>
+
+                <p>
+                    <label for="maskapai">Maskapai</label>
+                    <input type="text" id="maskapai" name="maskapai" required>
+                </p>
+
+                <p>
+                    <label for="tahun-foto">Tahun Foto</label>
+                    <input
+                        type="number"
+                        id="tahun-foto"
+                        name="tahun-foto"
+                        min="1900"
+                        max="2026"
+                        required>
+                </p>
+
+                <p>
+                    <label for="lokasi-foto">Lokasi Foto</label>
+                    <input type="text" id="lokasi-foto" name="lokasi-foto" required>
+                </p>
+
+                <button type="submit">Simpan</button>
+            </form>
+        </section>
+
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <p>Saya tertarik dengan dunia penerbangan dan mengoleksi foto pesawat yang menurut saya menarik.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Herizky Ganesha · 25523103 · 2026</p>
+    </footer>
+</body>
+</html>
