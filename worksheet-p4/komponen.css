@@ -1,0 +1,98 @@
+/* Komponen dasar — bagian D.
+   Form/fokus akan dilengkapi pada bagian E. */
+
+a {
+    color: var(--color-primary);
+}
+
+
+/* TABEL */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+}
+
+caption {
+    margin-bottom: var(--space-3);
+
+    color: var(--color-fg);
+    font-weight: 600;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+thead th {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--gray-100);
+}
+
+
+/* GAMBAR */
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    max-height: 32rem;
+
+    object-fit: contain;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--gray-100);
+}
+
+figcaption {
+    margin-top: var(--space-3);
+
+    color: var(--color-fg);
+    font-size: var(--text-sm);
+    text-align: center;
+}
+
+
+/* TOMBOL DASAR */
+
+button {
+    font: inherit;
+
+    padding: var(--space-2) var(--space-4);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary);
+    color: var(--color-surface);
+
+    cursor: pointer;
+}
+
+
+/* FORM DASAR */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
