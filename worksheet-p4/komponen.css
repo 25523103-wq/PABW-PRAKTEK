@@ -1,5 +1,4 @@
-/* Komponen dasar — bagian D.
-   Form/fokus akan dilengkapi pada bagian E. */
+/* Komponen — bagian D + E */
 
 a {
     color: var(--color-primary);
@@ -16,7 +15,6 @@ table {
 
 caption {
     margin-bottom: var(--space-3);
-
     color: var(--color-fg);
     font-weight: 600;
     text-align: left;
@@ -31,11 +29,11 @@ td {
 
 thead th {
     background: var(--color-primary);
-    color: var(--color-surface);
+    color: var(--color-on-primary);
 }
 
 tbody tr:nth-child(even) {
-    background: var(--gray-100);
+    background: var(--color-surface-muted);
 }
 
 
@@ -48,27 +46,57 @@ figure {
 figure img {
     width: 100%;
     max-height: 32rem;
-
     object-fit: contain;
 
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
 
-    background: var(--gray-100);
+    background: var(--color-surface-muted);
 }
 
 figcaption {
     margin-top: var(--space-3);
-
     color: var(--color-fg);
     font-size: var(--text-sm);
     text-align: center;
 }
 
 
-/* TOMBOL DASAR */
+/* E.1 — FORM */
+
+.form-kolom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    font: inherit;
+
+    padding: var(--space-2) var(--space-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+    color: var(--color-fg);
+}
+
+
+/* TOMBOL */
 
 button {
+    align-self: flex-start;
+
     font: inherit;
 
     padding: var(--space-2) var(--space-4);
@@ -77,13 +105,68 @@ button {
     border-radius: var(--radius-md);
 
     background: var(--color-primary);
-    color: var(--color-surface);
+    color: var(--color-on-primary);
 
     cursor: pointer;
 }
 
+button:hover {
+    filter: brightness(0.92);
+}
 
-/* FORM DASAR */
+
+/* E.2 — FOKUS KEYBOARD */
+
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+
+/* FOKUS PADA TOGGLE TEMA */
+
+.pengalih-tema:focus-visible + .tombol-tema {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+
+/* E.3 — ISIAN TIDAK SAH */
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--color-danger);
+    border-width: 2px;
+}
+
+
+/* PESAN ERROR */
+
+.pesan-galat {
+    display: none;
+
+    color: var(--color-danger);
+    font-size: var(--text-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat,
+.form-kolom:has(select:user-invalid) .pesan-galat,
+.form-kolom:has(textarea:user-invalid) .pesan-galat {
+    display: block;
+}
+
+
+/* ISIAN VALID */
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+    border-color: var(--color-border);
+}
+
+
+/* FORM */
 
 form {
     display: flex;
@@ -91,8 +174,30 @@ form {
     gap: var(--space-4);
 }
 
-form p {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
+
+/* F.2 — TOGGLE TEMA */
+
+.pengalih-tema {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tombol-tema {
+    display: inline-block;
+
+    padding: var(--space-2) var(--space-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+
+    background: var(--color-surface);
+    color: var(--color-fg);
+
+    cursor: pointer;
+    font-size: var(--text-sm);
+}
+
+.tombol-tema:hover {
+    border-color: var(--color-primary);
 }
