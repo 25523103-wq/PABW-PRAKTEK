@@ -11,11 +11,21 @@
     <link rel="stylesheet" href="tema.css">
 </head>
 <body>
-    <header>
-        <h1>Koleksi Foto Pesawat Favorit</h1>
-        <p>Kumpulan foto pesawat favorit saya beserta informasi maskapai dan lokasinya.</p>
+    <header class="site-header">
+        <div class="header-baris">
+            <div>
+                <p class="eyebrow">Koleksi Penerbangan</p>
+                <h1>Koleksi Foto Pesawat Favorit</h1>
+                <p>Kumpulan foto pesawat favorit saya beserta informasi maskapai dan lokasinya.</p>
+            </div>
 
-        <nav aria-label="Navigasi utama">
+            <label class="tema-pilihan" for="tema">
+                <input class="pengalih-tema" type="checkbox" id="tema" name="tema">
+                <span class="tombol-tema" aria-label="Mode gelap">Mode gelap</span>
+            </label>
+        </div>
+
+        <nav class="main-nav" aria-label="Navigasi utama">
             <ul>
                 <li><a href="#koleksi">Beranda</a></li>
                 <li><a href="#koleksi">Koleksi Foto</a></li>
@@ -26,63 +36,71 @@
     </header>
 
     <main>
-        <section id="koleksi">
+        <section id="koleksi" class="panel">
             <h2>Daftar Koleksi Foto Pesawat</h2>
 
-            <table>
-                <caption>Daftar koleksi foto pesawat favorit</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Nama Pesawat</th>
-                        <th scope="col">Maskapai</th>
-                        <th scope="col">Lokasi Foto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Airbus A330-300</th>
-                        <td>Garuda Indonesia</td>
-                        <td>Bandara Soekarno-Hatta</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Boeing 777-300ER</th>
-                        <td>Singapore Airlines</td>
-                        <td>Bandara Changi</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Airbus A350-900</th>
-                        <td>Japan Airlines</td>
-                        <td>Bandara Haneda</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="katalog">
+                <article class="kartu">
+                    <table>
+                        <caption>Daftar koleksi foto pesawat favorit</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama Pesawat</th>
+                                <th scope="col">Maskapai</th>
+                                <th scope="col">Lokasi Foto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Airbus A330-300</th>
+                                <td>Garuda Indonesia</td>
+                                <td>Bandara Soekarno-Hatta</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Boeing 777-300ER</th>
+                                <td>Singapore Airlines</td>
+                                <td>Bandara Changi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Airbus A350-900</th>
+                                <td>Japan Airlines</td>
+                                <td>Bandara Haneda</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
 
-            <figure>
-                <img
-                    src="Citilinka330neo.jpg"
-                    alt="Airbus A330-900neo Citilink"
-                    width="640"
-                    height="360"
-                    loading="lazy">
-                <figcaption>Airbus A330-900neo Citilink</figcaption>
-            </figure>
+                <article class="kartu">
+                    <figure>
+                        <img
+                            src="Citilinka330neo.jpg"
+                            alt="Airbus A330-900neo Citilink"
+                            width="640"
+                            height="360"
+                            loading="lazy">
+                        <figcaption>Airbus A330-900neo Citilink</figcaption>
+                    </figure>
+                </article>
+            </div>
         </section>
 
-        <section id="tambah">
+        <section id="tambah" class="panel">
             <h2>Tambah Foto Baru</h2>
 
             <form action="/simpan" method="post">
-                <p>
+                <div class="form-kolom">
                     <label for="nama-pesawat">Nama Pesawat</label>
                     <input type="text" id="nama-pesawat" name="nama-pesawat" required>
-                </p>
+                    <small class="pesan-galat">Nama pesawat wajib diisi.</small>
+                </div>
 
-                <p>
+                <div class="form-kolom">
                     <label for="maskapai">Maskapai</label>
                     <input type="text" id="maskapai" name="maskapai" required>
-                </p>
+                    <small class="pesan-galat">Maskapai wajib diisi.</small>
+                </div>
 
-                <p>
+                <div class="form-kolom">
                     <label for="tahun-foto">Tahun Foto</label>
                     <input
                         type="number"
@@ -91,18 +109,20 @@
                         min="1900"
                         max="2026"
                         required>
-                </p>
+                    <small class="pesan-galat">Tahun foto harus di antara 1900 dan 2026.</small>
+                </div>
 
-                <p>
+                <div class="form-kolom">
                     <label for="lokasi-foto">Lokasi Foto</label>
                     <input type="text" id="lokasi-foto" name="lokasi-foto" required>
-                </p>
+                    <small class="pesan-galat">Lokasi foto wajib diisi.</small>
+                </div>
 
                 <button type="submit">Simpan</button>
             </form>
         </section>
 
-        <section id="tentang">
+        <section id="tentang" class="panel">
             <h2>Tentang Saya</h2>
             <p>Saya tertarik dengan dunia penerbangan dan mengoleksi foto pesawat yang menurut saya menarik.</p>
         </section>
