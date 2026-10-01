@@ -41,3 +41,14 @@ AI digunakan untuk membantu menyusun kerangka HTML
 
 Kriteria selesai saya: mengubah --color-primary di satu baris
 harus mengubah warna tombol, tautan, judul, dan garis fokus.
+
+# Worksheet P05 — Layout Modern: Flexbox dan Grid
+
+Nama: Herizky Ganesha
+NIM: 25523103
+Kelas: B
+Tanggal: 30/09/2026
+
+Semua data pesawat, foto, formulir, warna, token, serta aturan tema P4 dipertahankan. HTML hanya diberi kelas/wadah layout, bagian Tentang Saya dipindahkan menjadi sidebar, dan tautan internal ditambahkan untuk latihan menu samping serta kaki kartu.
+
+Buka `profil.html` langsung di browser. Lima CSS dan `Citilinka330neo.jpg` harus berada dalam folder yang sama. Formulir masih menggunakan `action="/simpan"` dari P4; penyimpanan memerlukan backend yang tidak termasuk tugas layout ini. Pilihan Mode gelap mengikuti perilaku P4: centang memaksa gelap, lepas centang kembali ke tema sistem.
