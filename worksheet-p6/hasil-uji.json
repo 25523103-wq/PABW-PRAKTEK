@@ -1,0 +1,68 @@
+[
+  {
+    "width": 360,
+    "pageWidth": 360,
+    "columns": "294px",
+    "contentColumns": "328px",
+    "tableClient": 260,
+    "tableScroll": 559,
+    "tableScrollLeft": 100,
+    "imageFits": true,
+    "viewport": "width=device-width, initial-scale=1.0",
+    "pFont": "16px"
+  },
+  {
+    "width": 768,
+    "pageWidth": 768,
+    "columns": "343px 343px",
+    "contentColumns": "736px",
+    "tableClient": 309,
+    "tableScroll": 559,
+    "tableScrollLeft": 100,
+    "imageFits": true,
+    "viewport": "width=device-width, initial-scale=1.0",
+    "pFont": "16px"
+  },
+  {
+    "width": 1280,
+    "pageWidth": 1280,
+    "columns": "271.328px 271.328px 271.344px",
+    "contentColumns": "256px 880px",
+    "tableClient": 237,
+    "tableScroll": 559,
+    "tableScrollLeft": 100,
+    "imageFits": true,
+    "viewport": "width=device-width, initial-scale=1.0",
+    "pFont": "16px"
+  },
+  {
+    "test": "teks-200-persen",
+    "width": 360,
+    "pageWidth": 360,
+    "pFont": "32px"
+  },
+  {
+    "test": "breakpoint",
+    "width": 767,
+    "columns": "701px",
+    "pageWidth": 767
+  },
+  {
+    "test": "breakpoint",
+    "width": 768,
+    "columns": "343px 343px",
+    "pageWidth": 768
+  },
+  {
+    "test": "breakpoint",
+    "width": 959,
+    "columns": "438.5px 438.5px",
+    "pageWidth": 959
+  },
+  {
+    "test": "breakpoint",
+    "width": 960,
+    "columns": "196.656px 196.672px 196.672px",
+    "pageWidth": 960
+  }
+]
