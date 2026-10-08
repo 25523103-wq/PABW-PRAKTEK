@@ -52,3 +52,7 @@ Tanggal: 30/09/2026
 Semua data pesawat, foto, formulir, warna, token, serta aturan tema P4 dipertahankan. HTML hanya diberi kelas/wadah layout, bagian Tentang Saya dipindahkan menjadi sidebar, dan tautan internal ditambahkan untuk latihan menu samping serta kaki kartu.
 
 Buka `profil.html` langsung di browser. Lima CSS dan `Citilinka330neo.jpg` harus berada dalam folder yang sama. Formulir masih menggunakan `action="/simpan"` dari P4; penyimpanan memerlukan backend yang tidak termasuk tugas layout ini. Pilihan Mode gelap mengikuti perilaku P4: centang memaksa gelap, lepas centang kembali ke tema sistem.
+
+# Worksheet P8 — Koleksi Foto Pesawat
+
+Melanjutkan tema, foto, dan CSS dari P6. Struktur `css/`, `html/`, dan `js/` mengikuti ZIP P8. Halaman utama `profil.html` tersedia di root sesuai instruksi worksheet; `html/profil.html` juga dapat dibuka dengan struktur P8. Keduanya menggunakan modul dan data yang sama. Penggunaan AI pada bagian galat dan perbaikan sintaks HTML, CSS, dan JS.
