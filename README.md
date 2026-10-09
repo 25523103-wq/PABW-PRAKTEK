@@ -53,6 +53,14 @@ Semua data pesawat, foto, formulir, warna, token, serta aturan tema P4 dipertaha
 
 Buka `profil.html` langsung di browser. Lima CSS dan `Citilinka330neo.jpg` harus berada dalam folder yang sama. Formulir masih menggunakan `action="/simpan"` dari P4; penyimpanan memerlukan backend yang tidak termasuk tugas layout ini. Pilihan Mode gelap mengikuti perilaku P4: centang memaksa gelap, lepas centang kembali ke tema sistem.
 
+# Worksheet P6 — Layout Responsif
+
+Melanjutkan layout Flexbox dan Grid dari P5 dengan menambahkan `responsif.css`. Tampilan menyesuaikan lebar layar, gambar mengikuti ukuran wadah, dan tabel dapat digulir mendatar. Pengujian dilakukan pada lebar 360, 768, dan 1280 piksel; hasil dan screenshot tersedia di folder `worksheet-p6`.
+
 # Worksheet P8 — Koleksi Foto Pesawat
 
 Melanjutkan tema, foto, dan CSS dari P6. Struktur `css/`, `html/`, dan `js/` mengikuti ZIP P8. Halaman utama `profil.html` tersedia di root sesuai instruksi worksheet; `html/profil.html` juga dapat dibuka dengan struktur P8. Keduanya menggunakan modul dan data yang sama. Penggunaan AI pada bagian galat dan perbaikan sintaks HTML, CSS, dan JS.
+
+# Worksheet P9 — DOM, Event, dan Validasi Form
+
+Melanjutkan P8 dengan pengisian halaman dan render daftar proyek melalui `js/dom.js`. Filter kategori menggunakan event delegation, sedangkan form menampilkan pesan galat per kolom dan mengaktifkan tombol Simpan setelah semua isian valid. Data tambahan berlaku sampai halaman dimuat ulang. Pengujian mencakup validasi form, selector, pendengar klik, dan daftar kosong; screenshot tersedia di `worksheet-p9/bukti`. AI digunakan untuk membantu perbaikan kode dalam pengujian bagian D–E.
