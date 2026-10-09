@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/komponen.css">
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/responsif.css">
+</head>
+<body class="page">
+    <header class="site-header">
+        <div class="header-baris">
+            <div>
+                <p class="eyebrow">Koleksi Penerbangan</p>
+                <h1 id="judul-halaman"></h1>
+                <p id="deskripsi-halaman"></p>
+            </div>
+
+            <label class="tema-pilihan" for="tema">
+                <input class="pengalih-tema" type="checkbox" id="tema" name="tema">
+                <span class="tombol-tema" aria-label="Mode gelap">Mode gelap</span>
+            </label>
+        </div>
+
+        <nav class="main-nav" aria-label="Navigasi utama">
+            <ul class="navbar">
+                <li><a href="#koleksi">Beranda</a></li>
+                <li><a href="#koleksi">Koleksi Foto</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#tambah">Tambah Foto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="isi content">
+        <aside id="tentang" class="panel sisi sidebar">
+            <h2>Tentang Saya</h2>
+            <p id="perkenalan"></p>
+            <p id="tentang-profil"></p>
+            <p id="keahlian"></p>
+            <p id="jumlah-koleksi"></p>
+        <section aria-labelledby="judul-proyek">
+                <h3 id="judul-proyek">Daftar Proyek</h3>
+                <div id="filter" role="group" aria-label="Filter kategori proyek">
+            <button
+            type="button"
+            data-kategori="semua"
+            class="aktif"
+            aria-pressed="true">
+            Semua
+            </button>
+            <button
+            type="button"
+            data-kategori="web"
+            aria-pressed="false">
+            Web
+            </button>
+            <button
+            type="button"
+            data-kategori="data"
+            aria-pressed="false">
+            Data
+            </button>
+    </div>
+    <ul id="daftar"></ul>
+    <p id="pesan-kosong" role="status" hidden>
+        Tidak ada proyek pada kategori itu.
+    </p>
+</section>
+            <nav aria-label="Menu samping">
+                <ul class="menu-samping">
+                    <li><a href="#koleksi">Koleksi Foto</a></li>
+                    <li><a href="#tambah">Tambah Foto</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section id="koleksi" class="panel utama">
+            <h2>Daftar Koleksi Foto Pesawat</h2>
+
+            <div class="katalog galeri grid">
+                <article class="kartu">
+                    <div class="kartu__isi">
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Tabel koleksi pesawat, gulir mendatar untuk melihat semua kolom">
+                    <table>
+                        <caption class="kartu__judul">Daftar koleksi foto pesawat favorit</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama Pesawat</th>
+                                <th scope="col">Maskapai</th>
+                                <th scope="col">Lokasi Foto</th>
+                            </tr>
+                        </thead>
+                        <tbody id="daftar-koleksi"></tbody>
+                    </table>
+                    </div>
+                    </div>
+                    <div class="kartu__kaki">
+                        <a href="#tambah">Tambah Foto</a>
+                        <a href="#tentang">Tentang Saya</a>
+                    </div>
+                </article>
+
+                <article class="kartu">
+                    <figure class="kartu__isi">
+                        <img
+                            src="../Citilinka330neo.jpg"
+                            id="foto-utama" alt="Foto pesawat"
+                            width="640"
+                            height="360"
+                            loading="lazy">
+                        <figcaption class="kartu__judul" id="keterangan-foto"></figcaption>
+                    </figure>
+                    <div class="kartu__kaki">
+                        <a href="#tambah">Tambah Foto</a>
+                        <a href="#tentang">Tentang Saya</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="tambah" class="panel bawah">
+            <h2>Tambah Foto Baru</h2>
+
+            <form id="form-koleksi" novalidate>
+                <div class="form-kolom">
+                    <label for="nama-pesawat">Nama Pesawat</label>
+                    <input type="text" id="nama-pesawat" name="nama-pesawat"
+                        aria-describedby="galat-nama" required>
+                    <small id="galat-nama" class="pesan-galat" hidden></small>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="maskapai">Maskapai</label>
+                    <input type="text" id="maskapai" name="maskapai"
+                        aria-describedby="galat-maskapai" required>
+                    <small id="galat-maskapai" class="pesan-galat" hidden></small>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="tahun-foto">Tahun Foto</label>
+                    <input type="number" id="tahun-foto" name="tahun-foto" min="1900" max="2026" step="1"
+                        aria-describedby="galat-tahun" required>
+                    <small id="galat-tahun" class="pesan-galat" hidden></small>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="lokasi-foto">Lokasi Foto</label>
+                    <input type="text" id="lokasi-foto" name="lokasi-foto"
+                        aria-describedby="galat-lokasi" required>
+                    <small id="galat-lokasi" class="pesan-galat" hidden></small>
+                </div>
+
+                <button id="tombol-simpan" type="submit" disabled>Simpan</button>
+            </form>
+            <p id="pesan-simpan" role="status" aria-live="polite"></p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p id="identitas-footer"></p>
+    </footer>
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/dom.js"></script>
+</body>
+</html>
