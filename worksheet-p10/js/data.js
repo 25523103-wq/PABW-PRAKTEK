@@ -1,3 +1,4 @@
+// B dan D: seluruh isi profil ditulis sekali sebagai data.
 export const profil = {
     nama: "Herizky Ganesha",
     nim: "25523103",
@@ -9,26 +10,11 @@ export const profil = {
     tahun: 2026,
     fotoUtama: "Airbus A330-900neo Citilink",
 };
-
+// Status ini merupakan data latihan, bukan klaim penyelesaian proyek lain.
 export const daftarProyek = [
-    {
-        judul: "Halaman Profil P6",
-        tahun: 2026,
-        selesai: true,
-        kategori: "web",
-    },
-    {
-        judul: "Koleksi Pesawat P8",
-        tahun: 2026,
-        selesai: true,
-        kategori: "web",
-    },
-    {
-        judul: "Album Foto Penerbangan",
-        tahun: 2026,
-        selesai: false,
-        kategori: "foto",
-    },
+    { judul: "Halaman Profil P6", tahun: 2026, selesai: true, kategori: "web" },
+    { judul: "Koleksi Pesawat P8", tahun: 2026, selesai: true, kategori: "web" },
+    { judul: "Album Foto Penerbangan", tahun: 2026, selesai: false, kategori: "foto" },
 ];
 export const daftarKoleksi = [
     { nama: "Airbus A330-300", maskapai: "Garuda Indonesia", lokasi: "Bandara Soekarno-Hatta", tahun: 2026 },

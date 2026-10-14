@@ -64,3 +64,24 @@ Melanjutkan tema, foto, dan CSS dari P6. Struktur `css/`, `html/`, dan `js/` men
 # Worksheet P9 — DOM, Event, dan Validasi Form
 
 Melanjutkan P8 dengan pengisian halaman dan render daftar proyek melalui `js/dom.js`. Filter kategori menggunakan event delegation, sedangkan form menampilkan pesan galat per kolom dan mengaktifkan tombol Simpan setelah semua isian valid. Data tambahan berlaku sampai halaman dimuat ulang. Pengujian mencakup validasi form, selector, pendengar klik, dan daftar kosong; screenshot tersedia di `worksheet-p9/bukti`. AI digunakan untuk membantu perbaikan kode dalam pengujian bagian D–E.
+
+
+## Pertemuan 10 — JavaScript Asinkron
+
+- js/api.js: mengambil data, memeriksa status HTTP,
+  membaca JSON, dan memeriksa bentuk results.
+- js/app.js: memanggil ambilBerita() dan menangani kegagalan.
+- js/dom.js: membuat kartu dan menampilkan keadaan antarmuka.
+
+
+### Keadaan antarmuka
+
+- Memuat: menampilkan "Memuat berita...".
+- Berhasil: menampilkan kartu artikel dan jumlahnya.
+- Gagal: menampilkan pesan kegagalan.
+- Kosong: menampilkan "Belum ada berita.".
+
+
+### Bantuan AI
+
+Saya menggunakan ChatGPT untuk membantu memandu saya mengerjakan worksheet secara step by step dan memberikan saya link untuk dijadikan berita

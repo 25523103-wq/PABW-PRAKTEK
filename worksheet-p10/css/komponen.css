@@ -202,13 +202,14 @@ form {
 .tombol-tema:hover {
     border-color: var(--color-primary);
 }
-
+/* C.1 Galeri: jumlah kolom otomatis, tanpa media query. */
 .galeri {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: var(--space-4);
 }
 
+/* C.2 Isi kartu satu arah dengan Flexbox. */
 .kartu {
     display: flex;
     flex-direction: column;
@@ -228,73 +229,45 @@ form {
     justify-content: space-between;
     gap: var(--space-2);
 }
+
+/* E.1 Tinggi kartu rata dalam satu baris, kaki kartu sejajar. */
 .galeri { align-items: stretch; }
 .galeri .kartu { min-height: 14rem; }
 
+/* E.2 Isi panjang boleh membungkus dan tidak mendorong kolom. */
 .kartu, .kartu__isi, .kartu__kaki > *, .form-kolom, input {
     min-width: 0;
 }
 .kartu__judul, .kartu__kaki, th, td { overflow-wrap: anywhere; }
 
-
+/* E.3 Minimum 16rem turun ke 100% jika wadah lebih kecil. */
 .galeri {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
 }
 table { table-layout: fixed; }
 th, td { padding: var(--space-2); }
 .kartu__kaki { flex-wrap: wrap; }
-
+/* Toggle transparan tetap dapat difokuskan, ukurannya tidak mengisi halaman. */
 .tema-pilihan { position: relative; }
 .pengalih-tema { width: 1rem; height: 1rem; }
 
-#daftar {
-    display: grid;
-    gap: var(--space-3);
-    list-style: none;
-    padding: 0;
-    margin-block: var(--space-4);
-}
-
-#daftar .kartu {
-    gap: var(--space-2);
-}
-
-#daftar .kartu__judul,
-#daftar p {
-    margin: 0;
-}
-
-#filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-    margin-block: var(--space-3);
-}
-
-#filter button.aktif {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    font-weight: 700;
-}
-
-/* P9 D ? Pesan validasi dikendalikan oleh JavaScript. */
-#form-koleksi .pesan-galat {
-    display: block;
-}
-
-#form-koleksi .pesan-galat[hidden] {
-    display: none;
-}
-
-#form-koleksi input[aria-invalid="true"] {
-    border: 2px solid var(--color-danger);
-}
-
-#form-koleksi input[aria-invalid="false"] {
-    border: 1px solid var(--color-border);
-}
-
-#tombol-simpan:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
+/* P9: kartu proyek, filter, dan validasi. */
+#daftar { display: grid; gap: 1rem; list-style: none; padding: 0; }
+#daftar .kartu { padding: 1rem; gap: .5rem; }
+#daftar h4, #daftar p { margin: 0; }
+#filter { display: flex; flex-wrap: wrap; gap: .5rem; }
+#filter .aktif { outline: 2px solid currentColor; outline-offset: 2px; }
+#form-koleksi .pesan-galat { display: block; }
+#form-koleksi .pesan-galat[hidden] { display: none; }
+#form-koleksi input[aria-invalid="true"] { border-color: #c62828; }
+#form-koleksi input[aria-invalid="false"] { border-color: #64748b; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+/* P10: data eksternal menjadi kartu. */
+#berita { margin-top: 1.5rem; }
+#status-berita { margin-block: 1rem; }
+#daftar-berita { display: grid; gap: 1rem; padding: 0; margin: 0; list-style: none; }
+.kartu-berita { padding: 1rem; border: 1px solid #94a3b8; border-radius: .75rem; overflow-wrap: anywhere; }
+.kartu-berita h4 { margin: 0 0 .5rem; }
+.kartu-berita p { margin: .5rem 0 0; }
+.kartu-berita__sumber { font-size: .875rem; }
+#muat-berita:disabled { cursor: wait; }

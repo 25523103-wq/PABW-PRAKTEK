@@ -39,38 +39,13 @@
     <main class="isi content">
         <aside id="tentang" class="panel sisi sidebar">
             <h2>Tentang Saya</h2>
-            <p id="perkenalan"></p>
-            <p id="tentang-profil"></p>
-            <p id="keahlian"></p>
-            <p id="jumlah-koleksi"></p>
-        <section aria-labelledby="judul-proyek">
-                <h3 id="judul-proyek">Daftar Proyek</h3>
-                <div id="filter" role="group" aria-label="Filter kategori proyek">
-            <button
-            type="button"
-            data-kategori="semua"
-            class="aktif"
-            aria-pressed="true">
-            Semua
-            </button>
-            <button
-            type="button"
-            data-kategori="web"
-            aria-pressed="false">
-            Web
-            </button>
-            <button
-            type="button"
-            data-kategori="data"
-            aria-pressed="false">
-            Data
-            </button>
-    </div>
-    <ul id="daftar"></ul>
-    <p id="pesan-kosong" role="status" hidden>
-        Tidak ada proyek pada kategori itu.
-    </p>
-</section>
+            <p id="perkenalan"></p><p id="tentang-profil"></p><p id="keahlian"></p><p id="jumlah-koleksi"></p><section aria-labelledby="judul-proyek">
+<h3 id="judul-proyek">Daftar Proyek</h3>
+<div id="filter" aria-label="Filter kategori proyek">
+<button type="button" data-kategori="semua" class="aktif" aria-pressed="true">Semua</button>
+<button type="button" data-kategori="web" aria-pressed="false">Web</button>
+<button type="button" data-kategori="data" aria-pressed="false">Data</button>
+</div><ul id="daftar"></ul><p id="pesan-kosong" hidden role="status">Belum ada proyek pada kategori ini.</p></section>
             <nav aria-label="Menu samping">
                 <ul class="menu-samping">
                     <li><a href="#koleksi">Koleksi Foto</a></li>
@@ -104,6 +79,7 @@
                         <a href="#tentang">Tentang Saya</a>
                     </div>
                 </article>
+
                 <article class="kartu">
                     <figure class="kartu__isi">
                         <img
@@ -119,18 +95,13 @@
                         <a href="#tentang">Tentang Saya</a>
                     </div>
                 </article>
-                <section id="berita" aria-labelledby="judul-berita">
-                    <h3 id="judul-berita">Berita Antariksa</h3>
-
-                    <button id="muat-berita" type="button">
-                    Muat ulang berita
-                    </button>
-
-                    <p id="status-berita" role="status" aria-live="polite"></p>
-
-                    <ul id="daftar-berita"></ul>
-                </section>
             </div>
+<section id="berita" aria-labelledby="judul-berita">
+<h3 id="judul-berita">Berita Antariksa</h3>
+<button id="muat-berita" type="button">Muat ulang berita</button>
+<p id="status-berita" role="status" aria-live="polite"></p>
+<ul id="daftar-berita"></ul>
+</section>
         </section>
 
         <section id="tambah" class="panel bawah">
@@ -139,35 +110,37 @@
             <form id="form-koleksi" novalidate>
                 <div class="form-kolom">
                     <label for="nama-pesawat">Nama Pesawat</label>
-                    <input type="text" id="nama-pesawat" name="nama-pesawat"
-                        aria-describedby="galat-nama" required>
-                    <small id="galat-nama" class="pesan-galat" hidden></small>
+                    <input type="text" id="nama-pesawat" aria-describedby="galat-nama-pesawat" name="nama-pesawat" required>
+                    <small class="pesan-galat" id="galat-nama-pesawat" hidden>Nama pesawat wajib diisi.</small>
                 </div>
 
                 <div class="form-kolom">
                     <label for="maskapai">Maskapai</label>
-                    <input type="text" id="maskapai" name="maskapai"
-                        aria-describedby="galat-maskapai" required>
-                    <small id="galat-maskapai" class="pesan-galat" hidden></small>
+                    <input type="text" id="maskapai" aria-describedby="galat-maskapai" name="maskapai" required>
+                    <small class="pesan-galat" id="galat-maskapai" hidden>Maskapai wajib diisi.</small>
                 </div>
 
                 <div class="form-kolom">
                     <label for="tahun-foto">Tahun Foto</label>
-                    <input type="number" id="tahun-foto" name="tahun-foto" min="1900" max="2026" step="1"
-                        aria-describedby="galat-tahun" required>
-                    <small id="galat-tahun" class="pesan-galat" hidden></small>
+                    <input
+                        type="number"
+                        id="tahun-foto" aria-describedby="galat-tahun-foto"
+                        name="tahun-foto"
+                        min="1900"
+                        max="2026"
+                        required>
+                    <small class="pesan-galat" id="galat-tahun-foto" hidden>Tahun foto harus di antara 1900 dan 2026.</small>
                 </div>
 
                 <div class="form-kolom">
                     <label for="lokasi-foto">Lokasi Foto</label>
-                    <input type="text" id="lokasi-foto" name="lokasi-foto"
-                        aria-describedby="galat-lokasi" required>
-                    <small id="galat-lokasi" class="pesan-galat" hidden></small>
+                    <input type="text" id="lokasi-foto" aria-describedby="galat-lokasi-foto" name="lokasi-foto" required>
+                    <small class="pesan-galat" id="galat-lokasi-foto" hidden>Lokasi foto wajib diisi.</small>
                 </div>
 
                 <button id="tombol-simpan" type="submit" disabled>Simpan</button>
             </form>
-            <p id="pesan-simpan" role="status" aria-live="polite"></p>
+<p id="pesan-simpan" role="status" aria-live="polite"></p>
         </section>
 
 
@@ -176,7 +149,7 @@
     <footer>
         <p id="identitas-footer"></p>
     </footer>
-    <script type="module" src="../js/app.js"></script>
-    <script type="module" src="../js/dom.js"></script>
+<script type="module" src="../js/app.js"></script>
+<script type="module" src="../js/dom.js"></script>
 </body>
 </html>

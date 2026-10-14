@@ -1,75 +1,21 @@
-import { ambilBerita } from "./api.js";
-
 import { profil, daftarProyek, daftarKoleksi } from "./data.js";
-
-import {
-    buatPerkenalan,
-    formatKeahlian,
-    hitungProyekSelesai,
-} from "./fungsi.js";
-
+import { hitungProyekSelesai } from "./fungsi.js";
+import { ambilBerita } from "./api.js";
 export { profil, daftarProyek, daftarKoleksi };
 
-const jumlahProyek = daftarProyek.length;
+// Latihan pengolahan array P8–P9, tanpa memodifikasi data asli.
+console.log("Judul proyek:", daftarProyek.map((p) => p.judul));
+console.log("Proyek selesai:", daftarProyek.filter((p) => p.selesai));
+console.log("Proyek pilihan:", daftarProyek.find((p) => p.kategori === "web"));
+console.log("Urutan judul:", [...daftarProyek].sort((a, b) => a.judul.localeCompare(b.judul)));
+console.log("Jumlah selesai:", hitungProyekSelesai(daftarProyek));
 
-const kota = profil.alamat?.kota ?? "Belum diisi";
-
-const judulProyek = daftarProyek.map((proyek) => proyek.judul);
-
-const proyekSelesai = daftarProyek.filter(
-    (proyek) => proyek.selesai === true
-);
-
-const proyekPilihan = daftarProyek.find(
-    (proyek) => proyek.judul === "Koleksi Pesawat P8"
-);
-
-const proyekUrut = [...daftarProyek].sort(
-    (a, b) => a.judul.localeCompare(b.judul)
-);
-
-const salinanProfil = {
-    ...profil,
-    nama: "Nama pada salinan",
-};
-
-console.log(buatPerkenalan(profil));
-
-console.log(formatKeahlian(profil.keahlian));
-
-console.log(
-    `Ada ${jumlahProyek} proyek; ` +
-    `${hitungProyekSelesai(daftarProyek)} selesai. Kota: ${kota}`
-);
-
-console.table(profil.keahlian);
-
-console.table(daftarProyek);
-
-console.table(proyekSelesai);
-
-console.log("Hasil map:", judulProyek);
-
-console.log("Hasil find:", proyekPilihan);
-
-console.log("Urutan salinan:", proyekUrut);
-
-console.log("Urutan asli:", daftarProyek);
-
-console.log("Salinan profil:", salinanProfil);
-
+// P10 B: pemanggil menangani penolakan dari api.js.
 export async function muatBerita() {
-    try {
-        const data = await ambilBerita();
-
-        return {
-            data,
-            galat: null,
-        };
-    } catch (galat) {
-        return {
-            data: null,
-            galat: galat.message,
-        };
-    }
+  try {
+    const data = await ambilBerita();
+    return { data, galat: null };
+  } catch (galat) {
+    return { data: null, galat: galat.message };
+  }
 }
