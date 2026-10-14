@@ -1,0 +1,86 @@
+/* B. Gaya dasar mobile-first; tanpa media query. */
+.page {
+    min-height: 100dvh;
+}
+
+.site-header, .isi {
+    width: min(calc(100% - var(--space-4) - var(--space-4)), 72rem);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "sisi" "utama" "bawah";
+    gap: var(--space-4);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+}
+
+.sidebar, .kartu {
+    width: 100%;
+    min-width: 0;
+}
+
+.content > *, .grid > *, .kartu__isi, .header-baris > * {
+    min-width: 0;
+}
+
+.header-baris {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar {
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+}
+
+.panel {
+    padding: var(--space-4);
+}
+
+.panel, .header-baris, footer {
+    overflow-wrap: anywhere;
+}
+
+/* D. Perlindungan isi: tetap bagian gaya dasar, sebelum breakpoint. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure img {
+    width: auto;
+    align-self: flex-start;
+}
+
+.table-wrap {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+/* Lebar tabel mengikuti isinya; gulir hanya terjadi di wadah tabel. */
+.table-wrap table { table-layout: auto; }
+.table-wrap th, .table-wrap td { white-space: nowrap; }
+
+p { font-size: 1rem; line-height: 1.6; }
+
+/* C. Tablet: dua kolom galeri, sidebar tetap di atas. */
+@media (min-width: 48rem) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .header-baris { flex-direction: row; align-items: center; }
+}
+
+/* C. Desktop: sidebar berdampingan dan galeri tiga kolom. */
+@media (min-width: 60rem) {
+    .content {
+        grid-template-columns: 16rem minmax(0, 1fr);
+        grid-template-areas: "sisi utama" "sisi bawah";
+    }
+    .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
