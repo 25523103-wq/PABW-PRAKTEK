@@ -85,3 +85,12 @@ Melanjutkan P8 dengan pengisian halaman dan render daftar proyek melalui `js/dom
 ### Bantuan AI
 
 Saya menggunakan ChatGPT untuk membantu memandu saya mengerjakan worksheet secara step by step dan memberikan saya link untuk dijadikan berita
+
+
+
+
+## Pertemuan 12
+
+Proyek Pertemuan 12 ini memindahkan halaman koleksi foto pesawat dari JavaScript modular ke Vue menggunakan Vite. Halaman menggunakan empat komponen, state reaktif, penyimpanan kategori dan tema melalui localStorage, serta Spaceflight News API melalui api.js. Jalankan npm install dan npm run dev untuk pengembangan, kemudian npm run build dan npm run preview untuk memeriksa hasil produksi. Versi Node.js: [hasil node -v], npm: [hasil npm -v]. Hasil pengukuran mode dev: [ukuran transferred dan jumlah requests]; preview: [ukuran transferred dan jumlah requests]. Screenshot preview disimpan di bukti/p12-preview.png.
+
+Saya menggunakan ChatGPT untuk membantu guiding saya step by step dalam mengerjakan worksheet ini, memberikan saya link untuk dijadikan berita, dan membantu saya menulis kode Vue. Saya juga menggunakan ChatGPT untuk membantu memperbaiki kesalahan sintaksis dan logika dalam kode Vue.

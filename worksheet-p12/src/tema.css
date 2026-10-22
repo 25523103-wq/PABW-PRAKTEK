@@ -1,0 +1,48 @@
+/* F.1 — tema gelap mengikuti pengaturan sistem */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0F172A;
+        --color-fg: #E2E8F0;
+        --color-surface: #1E293B;
+        --color-surface-muted: #334155;
+        --color-border: #64748B;
+
+        --color-primary:
+            color-mix(in srgb, var(--blue-700) 60%, white);
+
+        --color-on-primary: #0F172A;
+
+        --color-danger: #FF8A8A;
+
+        --color-focus:
+            color-mix(in srgb, var(--blue-700) 60%, white);
+
+        --shadow-1:
+            0 1px 3px rgba(0, 0, 0, .45);
+    }
+}
+
+
+/* F.2 — pilihan manual */
+
+:root:has(#tema:checked) {
+    --color-bg: #0F172A;
+    --color-fg: #E2E8F0;
+    --color-surface: #1E293B;
+    --color-surface-muted: #334155;
+    --color-border: #64748B;
+
+    --color-primary:
+        color-mix(in srgb, var(--blue-700) 60%, white);
+
+    --color-on-primary: #0F172A;
+
+    --color-danger: #FF8A8A;
+
+    --color-focus:
+        color-mix(in srgb, var(--blue-700) 60%, white);
+
+    --shadow-1:
+        0 1px 3px rgba(0, 0, 0, .45);
+}
